@@ -1,0 +1,1 @@
+select CONCAT("Q",ips_item_id), ips_site_page from wb_items_per_site where ips_site_id="cswiki" and ips_site_page in (select page_title from cswiki_p.page where page_id in (select cl_from from cswiki_p.categorylinks where cl_to="Údržba:Doplnit_štítek_na_Wikidatech"));
